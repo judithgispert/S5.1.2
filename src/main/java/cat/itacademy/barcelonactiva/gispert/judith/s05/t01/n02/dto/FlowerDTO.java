@@ -4,11 +4,13 @@ public class FlowerDTO {
     private long pk_FlowerDTOId;
     private String nameFlowerDTO;
     private String countryFlowerDTO;
+    private String typeFlowerDTO;
 
     public FlowerDTO(){}
-    public FlowerDTO(String nameFlowerDTO, String countryFlowerDTO){
+    public FlowerDTO(String nameFlowerDTO, String countryFlowerDTO, String typeFlowerDTO){
         this.nameFlowerDTO = nameFlowerDTO;
         this.countryFlowerDTO = countryFlowerDTO;
+        this.typeFlowerDTO = typeFlowerDTO;
     }
 
     public long getPk_FlowerDTOId() {
@@ -20,6 +22,9 @@ public class FlowerDTO {
     public String getCountryFlowerDTO() {
         return countryFlowerDTO;
     }
+    public String getTypeFlowerDTO() {
+        return typeFlowerDTO;
+    }
 
     public void setPk_FlowerDTOId(long pk_FlowerDTOId) {
         this.pk_FlowerDTOId = pk_FlowerDTOId;
@@ -30,6 +35,9 @@ public class FlowerDTO {
     public void setCountryFlowerDTO(String countryFlowerDTO) {
         this.countryFlowerDTO = countryFlowerDTO;
     }
+    public void setTypeFlowerDTO(String typeFlowerDTO) {
+        this.typeFlowerDTO = typeFlowerDTO;
+    }
 
     @Override
     public String toString() {
@@ -37,6 +45,7 @@ public class FlowerDTO {
                 "Id =" + pk_FlowerDTOId +
                 ", Name FlowerDTO ='" + nameFlowerDTO + '\'' +
                 ", Country FlowerDTO ='" + countryFlowerDTO + '\'' +
+                ", Type FlowerDTO ='" + typeFlowerDTO + '\'' +
                 '}';
     }
 }
