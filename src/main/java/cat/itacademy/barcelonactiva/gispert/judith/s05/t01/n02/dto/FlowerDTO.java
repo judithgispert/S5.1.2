@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FlowerDTO {
-    private long pk_FlowerDTOId;
+    private int pk_FlowerDTOId;
     private String nameFlowerDTO;
     private String countryFlowerDTO;
     private String typeFlowerDTO;
@@ -21,7 +21,7 @@ public class FlowerDTO {
         this.typeFlowerDTO = searchType();
     }
 
-    public long getPk_FlowerDTOId() {
+    public int getPk_FlowerDTOId() {
         return pk_FlowerDTOId;
     }
     public String getNameFlowerDTO() {
@@ -34,7 +34,7 @@ public class FlowerDTO {
         return typeFlowerDTO;
     }
 
-    public void setPk_FlowerDTOId(long pk_FlowerDTOId) {
+    public void setPk_FlowerDTOId(int pk_FlowerDTOId) {
         this.pk_FlowerDTOId = pk_FlowerDTOId;
     }
     public void setNameFlowerDTO(String nameFlowerDTO) {

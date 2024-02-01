@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Flower {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long pk_FlowerId;
+    private int pk_FlowerId;
     @Column(name = "nameFlower", nullable = false, length = 50)
     private String nameFlower;
     @Column(name = "countryFlower", nullable = false, length = 50)
@@ -18,7 +18,7 @@ public class Flower {
         this.countryFlower = countryFlower;
     }
 
-    public long getPk_FlowerId() {
+    public int getPk_FlowerId() {
         return pk_FlowerId;
     }
     public String getNameFlower() {
@@ -28,7 +28,7 @@ public class Flower {
             return countryFlower;
         }
 
-        public void setPk_FlowerId(long pk_FlowerId) {
+        public void setPk_FlowerId(int pk_FlowerId) {
             this.pk_FlowerId = pk_FlowerId;
         }
         public void setNameFlowerDTO(String nameFlowerDTO) {
