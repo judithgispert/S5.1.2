@@ -1,16 +1,24 @@
 package cat.itacademy.barcelonactiva.gispert.judith.s05.t01.n02.dto;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class FlowerDTO {
     private long pk_FlowerDTOId;
     private String nameFlowerDTO;
     private String countryFlowerDTO;
     private String typeFlowerDTO;
+    private final static List<String> countriesUE = new ArrayList<>(Arrays.asList("Austria", "Belgium", "Bulgaria", "Croatia", "Republic of Cyprus",
+            "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy",
+            "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia",
+            "Slovenia", "Spain", "Sweden"));
 
     public FlowerDTO(){}
-    public FlowerDTO(String nameFlowerDTO, String countryFlowerDTO, String typeFlowerDTO){
+    public FlowerDTO(String nameFlowerDTO, String countryFlowerDTO){
         this.nameFlowerDTO = nameFlowerDTO;
         this.countryFlowerDTO = countryFlowerDTO;
-        this.typeFlowerDTO = typeFlowerDTO;
+        this.typeFlowerDTO = searchType();
     }
 
     public long getPk_FlowerDTOId() {
@@ -37,6 +45,16 @@ public class FlowerDTO {
     }
     public void setTypeFlowerDTO(String typeFlowerDTO) {
         this.typeFlowerDTO = typeFlowerDTO;
+    }
+
+    public String searchType(){
+        boolean exist = countriesUE.contains(countryFlowerDTO);
+        if (!exist){
+            typeFlowerDTO = "Outside UE";
+        } else {
+            typeFlowerDTO = "UE";
+        }
+        return typeFlowerDTO;
     }
 
     @Override
