@@ -6,11 +6,12 @@ import cat.itacademy.barcelonactiva.gispert.judith.s05.t01.n02.exceptions.Flower
 import cat.itacademy.barcelonactiva.gispert.judith.s05.t01.n02.repository.IFlowerRepository;
 import cat.itacademy.barcelonactiva.gispert.judith.s05.t01.n02.service.IFlowerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class FlowerServiceImpl implements IFlowerService {
     @Autowired
     private IFlowerRepository flowerRepository;
