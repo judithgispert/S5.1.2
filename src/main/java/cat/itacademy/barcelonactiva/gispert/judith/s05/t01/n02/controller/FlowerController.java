@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/flower")
+@RequestMapping("/flower")
 public class FlowerController {
     @Autowired
     private FlowerServiceImpl flowerService;
